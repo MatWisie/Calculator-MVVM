@@ -23,6 +23,7 @@ namespace Calculator_MVVM
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }

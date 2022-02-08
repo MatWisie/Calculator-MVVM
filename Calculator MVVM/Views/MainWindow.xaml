@@ -13,12 +13,12 @@
             <RowDefinition Height="319*"/>
         </Grid.RowDefinitions>
         <Border BorderBrush="#dcdde1" BorderThickness="2" Background="#2f3640">
-            <TextBlock Text="0" 
-                       TextAlignment="Right" 
+            <TextBlock TextAlignment="Right" 
                        VerticalAlignment="Center"
                        FontSize="40" 
                        Foreground="White" 
-                       FontWeight="Bold"/>
+                       FontWeight="Bold"
+                       Text="{Binding ScreenVal}"/>
         </Border>
          
         <Grid Grid.Row="1" Margin="25 0 25 0">
@@ -35,7 +35,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="7" Grid.Column="0" Grid.Row="0" Style="{StaticResource numberButton}"/>
+            <Button Content="7" Grid.Column="0" Grid.Row="0" Style="{StaticResource numberButton}" Command="{Binding AddNumberCommand}"/>
             <Button Content="8" Grid.Column="1" Grid.Row="0" Style="{StaticResource numberButton}"/>
             <Button Content="9" Grid.Column="2" Grid.Row="0" Style="{StaticResource numberButton}"/>
             <Button Content="x" Grid.Column="3" Grid.Row="0" Style="{StaticResource numberButton}"/>
