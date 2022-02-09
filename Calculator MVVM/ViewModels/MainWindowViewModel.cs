@@ -15,6 +15,9 @@ namespace Calculator_MVVM
         public MainWindowViewModel() { 
             ScreenVal = "0";
             AddNumberCommand = new RelayCommand(AddNumber);
+            AddOperationCommand = new RelayCommand(AddOperation);
+            ClearScreenCommand = new RelayCommand(ClearScreen);
+            GetResultCommand = new RelayCommand(GetResult);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -36,9 +39,26 @@ namespace Calculator_MVVM
         }
 
         public ICommand AddNumberCommand { get; set; }
+        public ICommand AddOperationCommand { get; set; }
+        public ICommand ClearScreenCommand { get; set; }
+        public ICommand GetResultCommand { get; set; }
         private void AddNumber(object obj)
         {
-            MessageBox.Show("Add Number clicked");
+            MessageBox.Show(obj as string);
+        }
+
+        private void AddOperation(object obj)
+        {
+
+        }
+
+        private void ClearScreen(object obj)
+        {
+
+        }
+        private void GetResult(object obj)
+        {
+
         }
     }
 }
